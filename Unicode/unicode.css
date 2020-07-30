@@ -1,0 +1,10 @@
+.OMG{
+	font-family: 'LastResort';
+	border: 2px solid black;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.OMG .ZOMG {
+    border: 1px solid black;
+}

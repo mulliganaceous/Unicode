@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-16" />
+    <title>F0000</title>
+    <style>
+        @font-face {
+            font-family: 'Nom Na Tong';
+            src: url(NomNaTongLight.ttf);
+        }
+
+        .OMG {
+            border-collapse: collapse;
+            border: 2px solid silver;
+        }
+        .LOL {
+            font-family: 'Consolas';
+            font-size: 36pt;
+            font-weight: bold;
+        }
+        .ZOMG {
+            font-family: 'Nom Na Tong';
+            font-size: 48pt;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        Number.prototype.pad = function (size) {
+            var s = this.toString(16).toUpperCase();
+            // From StackOverflow [Mild Fuzz]
+            while (s.length < (size || 2)) {
+                s = "0" + s;
+            }
+            return s;
+        }
+
+        document.write("<table class='OMG'>");
+        for (var row = 0; row <= 0xFFF; row++) {
+            document.write("<tr>");
+            document.write(`<td class='LOL'>F${row.pad(3)}x</td>`);
+            for (var cell = 0; cell <= 0xF; cell++) {
+                document.write("<td class='ZOMG'>");
+                document.write(String.fromCodePoint(0xF0000 + 0x10 * row + cell));
+                document.write("</td >");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+</body>
+</html>

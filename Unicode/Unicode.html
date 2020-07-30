@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-16" />
+    <title>Unicode Character Set</title>
+    <link href="unicode.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <script type="text/javascript">
+        document.write("<table class='OMG'>");
+        for (var row = 0; row <= 0xFFF; row++) {
+            document.write("<tr>");
+            for (var cell = 0; cell <= 0xF; cell++) {
+                document.write("<td class='ZOMG'> " + String.fromCharCode(0x10 * row + cell) + "</td > ");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+</body>
+</html>

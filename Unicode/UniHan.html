@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Noto CJK</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Noto+Sans+CJK+SC&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Noto+Sans+CJK+JP&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Noto+Sans+CJK+KR&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap');
+        .* {
+            white-space: pre-line;
+        }
+
+        .consonant {
+            font-family: 'Noto Sans CJK SC', 'LastResort'
+        }
+
+        .dissonantI {
+
+        }
+        
+        .dissonantII {
+            font-family: 'Noto Sans CJK TC';
+            font-weight: lighter;
+            color: saddlebrown;
+            font-size: 32px;
+        }
+
+        .diffuse {
+
+        }
+
+        .ultradissonantII {
+            font-family: 'Noto Sans HK';
+            font-weight: lighter;
+            color: brown;
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        function CJK_table(style) {
+            document.write(`<DIV class=${style}>`);
+            // Common ideographs
+            for (var k = 0x4E00; k < 0xA000; k++) {
+                document.write(String.fromCodePoint(k));
+            }
+            // Extension A
+            document.write("</DIV>");
+        }
+        CJK_table("dissonantII");
+        CJK_table("ultradissonantII");
+    </script>
+</body>
+</html>
